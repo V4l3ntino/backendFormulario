@@ -26,5 +26,5 @@ class Expediente(models.Model):
     
 class Imagenes(models.Model):
     expediente = models.ForeignKey(Expediente, on_delete=models.CASCADE, related_name='imagen')
-    imagen = models.ImageField(upload_to='media/')
+    imagen = models.ImageField(upload_to='imagenes/')
     
