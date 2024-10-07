@@ -11,6 +11,7 @@ class Trabajador(models.Model):
     
     
 class Expediente(models.Model):
+    id = models.IntegerField(primary_key=True)
     trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE, related_name='expedientes')
     sexo = models.CharField(max_length=1)
     edad = models.IntegerField(default=18)
@@ -21,4 +22,9 @@ class Expediente(models.Model):
     
     def __str__(self):
         return f"Expediente de {self.trabajador.id}"
+    
+    
+class Imagenes(models.Model):
+    expediente = models.ForeignKey(Expediente, on_delete=models.CASCADE, related_name='imagen')
+    imagen = models.ImageField(upload_to='media/')
     
