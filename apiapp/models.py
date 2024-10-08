@@ -11,7 +11,7 @@ class Trabajador(models.Model):
     
     
 class Expediente(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.CharField(primary_key=True, max_length=37)
     trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE, related_name='expedientes')
     sexo = models.CharField(max_length=1)
     edad = models.IntegerField(default=18)
