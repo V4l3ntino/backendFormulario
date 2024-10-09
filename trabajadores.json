@@ -1,0 +1,12 @@
+{
+    "nombre": "lucia",
+    "edad": "29",
+    "puesto": "taller",
+    "sexo": 1,
+    "experiencia": "23",
+    "lugar_accidente": "almacen",
+    "hora": "9",
+    "fecha_accidente": "2024/02/10",
+    "lesion": "Esguince en el peroné.",
+    "tipo_lesion": [1,1,1,0]
+}
