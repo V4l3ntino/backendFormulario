@@ -58,7 +58,11 @@ class ObtenerTrabajadorPorId(APIView):
                 json.dump(data, f, indent=4)
                 
             
-            subprocess.run(['python', os.path.abspath("generateWord.py")], check=True)            
+            result2 = subprocess.run(['python', "-m", "pip", "install", "-r", "requirements.txt"])
+            print(result2)
+            result = subprocess.run(['python', os.path.abspath("generateWord.py")])
+            print(result)
+         
             return Response(status=status.HTTP_200_OK)
         except Trabajador.DoesNotExist:
             return Response({'error': 'Expediente no encontrado'}, status=status.HTTP_404_NOT_FOUND)
