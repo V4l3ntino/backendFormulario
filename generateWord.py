@@ -1,5 +1,6 @@
 import json
 import win32com.client as win32
+import os
 
 # Cargar datos desde un archivo JSON
 with open('json/expediente.json') as file:
@@ -8,7 +9,7 @@ with open('json/expediente.json') as file:
 # Abrir Word
 word = win32.Dispatch('Word.Application')
 word.Visible = True  # True si quieres ver la ventana de Word al ejecutar el script
-doc = word.Documents.Open('C:\\Users\\varmido\\Desktop\\APP_Formulario\\backend\\plantilla_ficha_accidente.docx')
+doc = word.Documents.Open(os.path.abspath("plantilla_ficha_accidente.docx"))
 
 
 
@@ -52,7 +53,7 @@ for control in doc.ContentControls:
         control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
 
 # Guardar el documento modificado
-doc.SaveAs('C:\\Users\\varmido\\Desktop\\APP_Formulario\\backend\\ficha_investigacion_completada.docx')
+doc.SaveAs(os.path.abspath("ficha_investigacion_completada.docx"))
 
 # Cerrar Word
 

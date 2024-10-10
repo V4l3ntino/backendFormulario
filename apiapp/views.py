@@ -7,6 +7,7 @@ from .models import Trabajador, Expediente
 from .serializers import TrabajadorSerializer, ExpedienteSerializer
 import subprocess
 import json
+import os
 # Create your views here.
 class ObtenerTrabajadorPorId(APIView):
     def post(self, request, id):
@@ -46,7 +47,7 @@ class ObtenerTrabajadorPorId(APIView):
                 json.dump(data, f, indent=4)
                 
             
-            subprocess.run(['python', 'C:\\Users\\varmido\\Desktop\\APP_Formulario\\backend\\prueba.py'], check=True)            
+            subprocess.run(['python', os.path.abspath("generateWord.py")], check=True)            
             return Response(status=status.HTTP_200_OK)
         except Trabajador.DoesNotExist:
             return Response({'error': 'Expediente no encontrado'}, status=status.HTTP_404_NOT_FOUND)
