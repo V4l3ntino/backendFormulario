@@ -1,0 +1,17 @@
+{
+    "nombre_trabajador": "Panza, Sancho",
+    "puesto_trabajo": "PRUEBA",
+    "edad": 56,
+    "experiencia": 882,
+    "lugar_accidente": "PRUEBA",
+    "hora_accidente": "09:30",
+    "fecha_accidente": "2024/03/08",
+    "lesion": " Se ha echo una erida en la pierna",
+    "sexo": "H",
+    "tipo_lesion": [
+        1,
+        0,
+        0,
+        0
+    ]
+}
