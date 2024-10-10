@@ -3,7 +3,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Trabajador, Expediente
+from .models import Trabajador, Expediente, Imagenes
 from .serializers import TrabajadorSerializer, ExpedienteSerializer
 import subprocess
 import json
@@ -13,7 +13,8 @@ class ObtenerTrabajadorPorId(APIView):
     def post(self, request, id):
         try:
             expediente = Expediente.objects.get(id=id)
-            
+            imagenes = Imagenes.objects.filter(expediente=expediente.id)
+            imagenes = [item.imagen for item in imagenes]
             tipo_lesion = [0,0,0,0]
             
             lesion = expediente.lesion.split("|")
@@ -47,6 +48,7 @@ class ObtenerTrabajadorPorId(APIView):
                 "lesionado_check": expediente.lesionado_check,
                 "sexo": expediente.sexo,
                 "descripcion_hechos": expediente.descripcion_hechos,
+                "imagenes": str(imagenes),
                 "id": expediente.id
             }
             

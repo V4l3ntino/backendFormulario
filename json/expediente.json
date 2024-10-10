@@ -1,20 +1,21 @@
 {
     "nombre_trabajador": "PRUEBA, USUARIO",
-    "puesto_trabajo": "",
+    "puesto_trabajo": "Nave 20",
     "edad": 18,
     "experiencia": 34,
-    "lugar_accidente": "",
-    "hora_accidente": "",
-    "fecha_accidente": "",
-    "lesion": "sa matao",
+    "lugar_accidente": "En los pal\u00e9s",
+    "hora_accidente": "11:47",
+    "fecha_accidente": "2024-11-03",
+    "lesion": "Sa echo una rotura",
     "tipo_lesion": [
         0,
+        1,
         0,
-        0,
-        1
+        0
     ],
     "lesionado_check": true,
-    "sexo": "H",
-    "descripcion_hechos": "",
+    "sexo": "M",
+    "descripcion_hechos": "Se cay\u00f3 de las escaleras",
+    "imagenes": "[<ImageFieldFile: imagenes/48fd9010-c1c1-11ee-9519-97453607d43e.jpg_BOO4CLc.webp>, <ImageFieldFile: imagenes/Captura_de_pantalla_2024-05-02_113443_skH9ccX.png>]",
     "id": "fe855ee4-ef72-4028-b235-50febe2d5987"
 }

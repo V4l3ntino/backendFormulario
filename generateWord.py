@@ -2,6 +2,7 @@ import json
 import win32com.client as win32
 import os
 from pathlib import Path
+import re
 
 # Cargar datos desde un archivo JSON
 with open('json/expediente.json') as file:
@@ -28,6 +29,7 @@ reemplazos = {
 }
 
 tipo_lesion = data['tipo_lesion']
+imagenes = data['imagenes'].split(",")
 
 # Reemplazar los valores en los marcadores
 for bookmark, value in reemplazos.items():
@@ -35,7 +37,7 @@ for bookmark, value in reemplazos.items():
         doc.Bookmarks(bookmark).Range.Text = str(value)
 
 
-path_image = r"c:\Users\varmido\Pictures\Screenshots\48fd9010-c1c1-11ee-9519-97453607d43e.jpg.webp"
+
 
 for control in doc.ContentControls:
     if control.Title == "SexoHombre":
@@ -53,8 +55,12 @@ for control in doc.ContentControls:
         control.Checked = (tipo_lesion[3] == 1)
     elif control.Title == "LesionSinLesion":
         control.Checked = (data['lesionado_check'] == False)
-    elif control.Title == "Foto1":
-        control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
+    for index, image in enumerate(imagenes):
+        image = re.sub(r"[<>[\]]","",image)
+        image = image.split("/")[1]
+        path_image = os.path.join(os.path.dirname(__file__), "media", "imagenes", image)
+        if control.Title == f"Foto{index+1}":
+            control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
 
 # Guardar el documento modificado
 archivo = f"ficha_{data["id"]}.docx"
