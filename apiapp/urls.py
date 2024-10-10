@@ -11,5 +11,5 @@ router.register('api/imagenes', ImagenesViewSet, 'apiImagenes')
 
 urlpatterns = router.urls
 urlpatterns += [
-    path('api/expediente/generar-documento-word/<str:id>/', ObtenerTrabajadorPorId.as_view(), name='obtenerTrabajadorPorId'),
+    path('api/expediente/generate-word-document/<str:id>/', ObtenerTrabajadorPorId.as_view(), name='obtenerTrabajadorPorId'),
 ]

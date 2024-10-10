@@ -1,18 +1,18 @@
 {
-    "nombre_trabajador": "Garcia, Gutierrez",
-    "puesto_trabajo": "",
+    "nombre_trabajador": "PRUEBA, USUARIO",
+    "puesto_trabajo": "ALMACEN",
     "edad": 18,
-    "experiencia": 89282,
-    "lugar_accidente": "",
-    "hora_accidente": "",
-    "fecha_accidente": "",
-    "lesion": "",
+    "experiencia": 34,
+    "lugar_accidente": "ALMACEN",
+    "hora_accidente": "11:47",
+    "fecha_accidente": "2024-10-27",
+    "lesion": " Rotura del hueso",
     "sexo": "M",
     "tipo_lesion": [
-        1,
+        0,
         0,
         0,
         0
     ],
-    "id": "15ada323-2f2c-4e2e-bfd3-ee58115a5a2d"
+    "id": "3e212bc3-2850-4304-b643-72af52e08ead"
 }
