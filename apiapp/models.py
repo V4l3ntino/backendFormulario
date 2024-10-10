@@ -19,6 +19,7 @@ class Expediente(models.Model):
     lugar_accidente = models.TextField(null=True, blank=True)
     fecha_suceso = models.CharField(max_length=16, null=True)
     lesion = models.TextField(null=True, blank=True)
+    lesionado_check = models.BooleanField(default=False)
     descripcion_hechos = models.TextField(null=True, blank=True)
     
     def __str__(self):

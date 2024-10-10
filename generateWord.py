@@ -50,9 +50,9 @@ for control in doc.ContentControls:
     elif control.Title == "LesionMuyGrave":
         control.Checked = (tipo_lesion[2] == 1)
     elif control.Title == "LesionMortal":
-        control.Title = (tipo_lesion[3] == 1)
+        control.Checked = (tipo_lesion[3] == 1)
     elif control.Title == "LesionSinLesion":
-        control.Title = (tipo_lesion[0] == 0 and tipo_lesion[1] == 0 and tipo_lesion[2] == 0 and tipo_lesion[3] == 0)
+        control.Checked = (data['lesionado_check'] == False)
     elif control.Title == "Foto1":
         control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
 

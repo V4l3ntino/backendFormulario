@@ -1,19 +1,20 @@
 {
     "nombre_trabajador": "PRUEBA, USUARIO",
-    "puesto_trabajo": null,
+    "puesto_trabajo": "",
     "edad": 18,
     "experiencia": 34,
-    "lugar_accidente": "ALMACEN",
-    "hora_accidente": "11:47",
-    "fecha_accidente": "2024-10-27",
-    "lesion": " Rotura del hueso",
-    "sexo": "M",
+    "lugar_accidente": "",
+    "hora_accidente": "",
+    "fecha_accidente": "",
+    "lesion": "sa matao",
     "tipo_lesion": [
         0,
         0,
-        1,
-        0
+        0,
+        1
     ],
-    "descripcion_hechos": "El trabajador no ten\u00eda el instrumental adecuado",
-    "id": "3e212bc3-2850-4304-b643-72af52e08ead"
+    "lesionado_check": true,
+    "sexo": "H",
+    "descripcion_hechos": "",
+    "id": "fe855ee4-ef72-4028-b235-50febe2d5987"
 }

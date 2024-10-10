@@ -43,8 +43,9 @@ class ObtenerTrabajadorPorId(APIView):
                 "hora_accidente": f"{hora}",
                 "fecha_accidente": f"{fecha}",
                 "lesion": lesion[1],
-                "sexo": expediente.sexo,
                 "tipo_lesion": tipo_lesion,
+                "lesionado_check": expediente.lesionado_check,
+                "sexo": expediente.sexo,
                 "descripcion_hechos": expediente.descripcion_hechos,
                 "id": expediente.id
             }
