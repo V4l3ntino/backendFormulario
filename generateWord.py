@@ -23,6 +23,7 @@ reemplazos = {
     'lugar_accidente': data['lugar_accidente'],
     'hora_accidente': data['hora_accidente'],
     'fecha_accidente': data['fecha_accidente'],
+    "descripcion_hechos": data['descripcion_hechos'],
     'lesion': data['lesion'],
 }
 
@@ -31,7 +32,7 @@ tipo_lesion = data['tipo_lesion']
 # Reemplazar los valores en los marcadores
 for bookmark, value in reemplazos.items():
     if doc.Bookmarks.Exists(bookmark):
-        doc.Bookmarks(bookmark).Range.Text = value
+        doc.Bookmarks(bookmark).Range.Text = str(value)
 
 
 path_image = r"c:\Users\varmido\Pictures\Screenshots\48fd9010-c1c1-11ee-9519-97453607d43e.jpg.webp"
@@ -50,6 +51,8 @@ for control in doc.ContentControls:
         control.Checked = (tipo_lesion[2] == 1)
     elif control.Title == "LesionMortal":
         control.Title = (tipo_lesion[3] == 1)
+    elif control.Title == "LesionSinLesion":
+        control.Title = (tipo_lesion[0] == 0 and tipo_lesion[1] == 0 and tipo_lesion[2] == 0 and tipo_lesion[3] == 0)
     elif control.Title == "Foto1":
         control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
 

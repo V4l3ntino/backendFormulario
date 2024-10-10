@@ -20,6 +20,12 @@ class ObtenerTrabajadorPorId(APIView):
             
             if(lesion[0].strip() == "Leve"):
                 tipo_lesion[0] = 1
+            if(lesion[0].strip() == "Grave"):
+                tipo_lesion[1] = 1
+            if(lesion[0].strip() == "MuyGrave"):
+                tipo_lesion[2] = 1
+            if(lesion[0].strip() == "Mortal"):
+                tipo_lesion[3] = 1
             
             hora = ""
             fecha = ""
@@ -30,7 +36,7 @@ class ObtenerTrabajadorPorId(APIView):
             
             data = {
                 "nombre_trabajador": f"{expediente.trabajador.apellido}, {expediente.trabajador.nombre}",
-                "puesto_trabajo": expediente.lugar_accidente,
+                "puesto_trabajo": expediente.puesto_trabajo,
                 "edad": expediente.edad,
                 "experiencia": expediente.trabajador.experiencia,
                 "lugar_accidente": expediente.lugar_accidente,
@@ -39,6 +45,7 @@ class ObtenerTrabajadorPorId(APIView):
                 "lesion": lesion[1],
                 "sexo": expediente.sexo,
                 "tipo_lesion": tipo_lesion,
+                "descripcion_hechos": expediente.descripcion_hechos,
                 "id": expediente.id
             }
             

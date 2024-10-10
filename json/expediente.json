@@ -1,6 +1,6 @@
 {
     "nombre_trabajador": "PRUEBA, USUARIO",
-    "puesto_trabajo": "ALMACEN",
+    "puesto_trabajo": null,
     "edad": 18,
     "experiencia": 34,
     "lugar_accidente": "ALMACEN",
@@ -11,8 +11,9 @@
     "tipo_lesion": [
         0,
         0,
-        0,
+        1,
         0
     ],
+    "descripcion_hechos": "El trabajador no ten\u00eda el instrumental adecuado",
     "id": "3e212bc3-2850-4304-b643-72af52e08ead"
 }

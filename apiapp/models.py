@@ -15,6 +15,7 @@ class Expediente(models.Model):
     trabajador = models.ForeignKey(Trabajador, on_delete=models.CASCADE, related_name='expedientes')
     sexo = models.CharField(max_length=1)
     edad = models.IntegerField(default=18)
+    puesto_trabajo = models.TextField(null=True, blank=True)
     lugar_accidente = models.TextField(null=True, blank=True)
     fecha_suceso = models.CharField(max_length=16, null=True)
     lesion = models.TextField(null=True, blank=True)
