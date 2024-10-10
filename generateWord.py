@@ -1,6 +1,7 @@
 import json
 import win32com.client as win32
 import os
+from pathlib import Path
 
 # Cargar datos desde un archivo JSON
 with open('json/expediente.json') as file:
@@ -33,7 +34,7 @@ for bookmark, value in reemplazos.items():
         doc.Bookmarks(bookmark).Range.Text = value
 
 
-path_image = "c:\\Users\\varmido\Pictures\\Screenshots\\48fd9010-c1c1-11ee-9519-97453607d43e.jpg.webp"
+path_image = r"c:\Users\varmido\Pictures\Screenshots\48fd9010-c1c1-11ee-9519-97453607d43e.jpg.webp"
 
 for control in doc.ContentControls:
     if control.Title == "SexoHombre":
@@ -53,7 +54,8 @@ for control in doc.ContentControls:
         control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
 
 # Guardar el documento modificado
-doc.SaveAs(os.path.abspath("ficha_investigacion_completada.docx"))
+path_absolute_file_export = os.path.join(os.path.dirname(__file__), "media", "word", "ficha_investigacion_completada.docx")
+doc.SaveAs(path_absolute_file_export)
 
 # Cerrar Word
 
