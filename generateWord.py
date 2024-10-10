@@ -54,7 +54,8 @@ for control in doc.ContentControls:
         control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
 
 # Guardar el documento modificado
-path_absolute_file_export = os.path.join(os.path.dirname(__file__), "media", "word", "ficha_investigacion_completada.docx")
+archivo = f"ficha_{data["id"]}.docx"
+path_absolute_file_export = os.path.join(os.path.dirname(__file__), "media", "word", archivo)
 doc.SaveAs(path_absolute_file_export)
 
 # Cerrar Word

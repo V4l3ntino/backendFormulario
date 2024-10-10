@@ -38,7 +38,8 @@ class ObtenerTrabajadorPorId(APIView):
                 "fecha_accidente": f"{fecha}",
                 "lesion": lesion[1],
                 "sexo": expediente.sexo,
-                "tipo_lesion": tipo_lesion
+                "tipo_lesion": tipo_lesion,
+                "id": expediente.id
             }
             
             path_file = "json/expediente.json"
