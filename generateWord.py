@@ -30,6 +30,8 @@ reemplazos = {
 
 tipo_lesion = data['tipo_lesion']
 imagenes = data['imagenes'].split(",")
+if data['imagenes'] == "[]":
+    imagenes = []
 
 # Reemplazar los valores en los marcadores
 for bookmark, value in reemplazos.items():

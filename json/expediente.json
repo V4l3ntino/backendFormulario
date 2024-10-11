@@ -1,21 +1,21 @@
 {
-    "nombre_trabajador": "user1, usuario1",
-    "puesto_trabajo": "Taller",
+    "nombre_trabajador": "PRUEBA, USUARIO",
+    "puesto_trabajo": "Autos",
     "edad": 18,
     "experiencia": 34,
-    "lugar_accidente": "Taller",
+    "lugar_accidente": "Nave 1",
     "hora_accidente": "11:47",
-    "fecha_accidente": "2024-10-18",
-    "lesion": "se ha roto el peron\u00e9",
+    "fecha_accidente": "2024-01-13",
+    "lesion": "Ospitalizado por infart",
     "tipo_lesion": [
         0,
         0,
-        1,
-        0
+        0,
+        1
     ],
     "lesionado_check": true,
-    "sexo": "M",
-    "descripcion_hechos": "Tiene que ir al hospital",
-    "imagenes": "[<ImageFieldFile: imagenes/Captura_de_pantalla_2024-05-02_113443_22FSsvG.png>]",
-    "id": "0dcea5e9-425a-495d-b155-bacc519ba403"
+    "sexo": "H",
+    "descripcion_hechos": "Al operario le ha dado un infarto y se le ha tenido que hace la RCP, Reanimaci\u00f3n Cardio Pulmonar. Actualmente est\u00e1 en estado cr\u00edtico",
+    "imagenes": "[]",
+    "id": "31accda2-b317-4849-9a93-a76dd9eb10df"
 }
