@@ -1,21 +1,21 @@
 {
     "nombre_trabajador": "PRUEBA, USUARIO",
-    "puesto_trabajo": "Autos",
+    "puesto_trabajo": "a",
     "edad": 18,
     "experiencia": 34,
-    "lugar_accidente": "Nave 1",
-    "hora_accidente": "11:47",
-    "fecha_accidente": "2024-01-13",
-    "lesion": "Ospitalizado por infart",
+    "lugar_accidente": "",
+    "hora_accidente": "",
+    "fecha_accidente": "",
+    "lesion": "",
     "tipo_lesion": [
         0,
+        1,
         0,
-        0,
-        1
+        0
     ],
     "lesionado_check": true,
-    "sexo": "H",
-    "descripcion_hechos": "Al operario le ha dado un infarto y se le ha tenido que hace la RCP, Reanimaci\u00f3n Cardio Pulmonar. Actualmente est\u00e1 en estado cr\u00edtico",
-    "imagenes": "[]",
-    "id": "31accda2-b317-4849-9a93-a76dd9eb10df"
+    "sexo": "M",
+    "descripcion_hechos": "",
+    "imagenes": "[<ImageFieldFile: imagenes/Screenshot_1_P77YfaF.png>, <ImageFieldFile: imagenes/layout01.jpg>, <ImageFieldFile: imagenes/pexels-eberhardgross-443446_IPHBIkj.jpg>]",
+    "id": "114a9f98-e20c-4b02-86b9-dda66d51285d"
 }

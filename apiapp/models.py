@@ -27,6 +27,7 @@ class Expediente(models.Model):
     
     
 class Imagenes(models.Model):
+    id = models.CharField(primary_key=True, max_length=37)
     expediente = models.ForeignKey(Expediente, on_delete=models.CASCADE, related_name='imagen')
     imagen = models.ImageField(upload_to='imagenes/')
     
