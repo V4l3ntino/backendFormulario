@@ -1,21 +1,21 @@
 {
-    "nombre_trabajador": "PRUEBA, USUARIO",
+    "nombre_trabajador": "Hontar  Dos Santos, Valentino",
     "puesto_trabajo": "a",
     "edad": 18,
-    "experiencia": 34,
+    "experiencia": 882,
     "lugar_accidente": "",
     "hora_accidente": "",
     "fecha_accidente": "",
     "lesion": "",
     "tipo_lesion": [
         0,
-        1,
+        0,
         0,
         0
     ],
-    "lesionado_check": true,
+    "lesionado_check": false,
     "sexo": "M",
     "descripcion_hechos": "",
-    "imagenes": "[<ImageFieldFile: imagenes/Screenshot_1_P77YfaF.png>, <ImageFieldFile: imagenes/layout01.jpg>, <ImageFieldFile: imagenes/pexels-eberhardgross-443446_IPHBIkj.jpg>]",
-    "id": "114a9f98-e20c-4b02-86b9-dda66d51285d"
+    "imagenes": "[]",
+    "id": "3fc7dd0b-af62-41fd-af7a-716015edca3e"
 }

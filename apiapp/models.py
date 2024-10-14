@@ -31,3 +31,7 @@ class Imagenes(models.Model):
     expediente = models.ForeignKey(Expediente, on_delete=models.CASCADE, related_name='imagen')
     imagen = models.ImageField(upload_to='imagenes/')
     
+class PuestoTrabajo(models.Model):
+    id = models.IntegerField(primary_key=True)
+    nombre = models.TextField()
+    
