@@ -35,3 +35,6 @@ class PuestoTrabajo(models.Model):
     id = models.IntegerField(primary_key=True)
     nombre = models.TextField()
     
+class LugarAccidente(models.Model):
+    id = models.IntegerField(primary_key=True)
+    nombre = models.TextField()

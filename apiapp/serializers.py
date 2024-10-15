@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Trabajador, Expediente, Imagenes, PuestoTrabajo
+from .models import Trabajador, Expediente, Imagenes, PuestoTrabajo, LugarAccidente
 
 class TrabajadorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,4 +21,9 @@ class ImagenesSerializer(serializers.ModelSerializer):
 class PuestoTrabajoSerializer(serializers.ModelSerializer):
     class Meta:
         model = PuestoTrabajo
+        fields = ('id', 'nombre')
+        
+class LugarAccidenteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LugarAccidente
         fields = ('id', 'nombre')
