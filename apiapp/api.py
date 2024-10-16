@@ -45,5 +45,5 @@ class FormaProducirseAccidenteViewSet(viewsets.ModelViewSet):
     serializer_class = FormaProducirseAccidenteSerializer
     @action(detail=False, methods=['delete'])
     def deleteall(self, request):
-        FormaProducirseAccidenteSerializer.objects.all().delete()
+        FormaProducirseAccidente.objects.all().delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
