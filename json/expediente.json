@@ -1,8 +1,8 @@
 {
-    "nombre_trabajador": "Hontar  Dos Santos, Valentino",
-    "puesto_trabajo": "a",
+    "nombre_trabajador": "Alexander, Luis",
+    "puesto_trabajo": "",
     "edad": 18,
-    "experiencia": 882,
+    "experiencia": 89282,
     "lugar_accidente": "",
     "hora_accidente": "",
     "fecha_accidente": "",
@@ -16,6 +16,6 @@
     "lesionado_check": false,
     "sexo": "M",
     "descripcion_hechos": "",
-    "imagenes": "[]",
-    "id": "3fc7dd0b-af62-41fd-af7a-716015edca3e"
+    "imagenes": "[<ImageFieldFile: imagenes/pexels-pixabay-15239_rwgkBtW.jpg>, <ImageFieldFile: imagenes/pexels-katieburandt-1212693_VqVDzpp.jpg>, <ImageFieldFile: imagenes/pexels-pixabay-60597_KrW5XiW.jpg>]",
+    "id": "83be1527-c7f8-4ada-a417-a43766b06873"
 }
