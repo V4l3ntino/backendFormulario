@@ -22,6 +22,7 @@ class Expediente(models.Model):
     lesion = models.TextField(null=True, blank=True)
     lesionado_check = models.BooleanField(default=False)
     descripcion_hechos = models.TextField(null=True, blank=True)
+    valoracion_hechos = models.TextField(null=True, blank=True)
     
     def __str__(self):
         return f"Expediente de {self.trabajador.id}"
