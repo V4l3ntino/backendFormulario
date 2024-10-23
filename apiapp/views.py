@@ -49,7 +49,8 @@ class ObtenerTrabajadorPorId(APIView):
                 "sexo": expediente.sexo,
                 "descripcion_hechos": expediente.descripcion_hechos,
                 "imagenes": str(imagenes),
-                "id": expediente.id
+                "id": expediente.id,
+                "valoracionHechos": expediente.valoracion_hechos
             }
             
             path_file = "json/expediente.json"

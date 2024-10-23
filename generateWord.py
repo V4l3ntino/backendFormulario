@@ -30,6 +30,8 @@ reemplazos = {
 
 tipo_lesion = data['tipo_lesion']
 imagenes = data['imagenes'].split(",")
+valoracion_hechos = data["valoracionHechos"].split(",")
+
 if data['imagenes'] == "[]":
     imagenes = []
 
@@ -57,6 +59,31 @@ for control in doc.ContentControls:
         control.Checked = (tipo_lesion[3] == 1)
     elif control.Title == "LesionSinLesion":
         control.Checked = (data['lesionado_check'] == False)
+    elif control.Title == "BAJA":
+        control.Checked = (valoracion_hechos[0] == "BAJA")
+    elif control.Title == "MEDIA":
+        control.Checked = (valoracion_hechos[0] == "MEDIA")
+    elif control.Title == "ALTA":
+        control.Checked = (valoracion_hechos[0] == "ALTA")
+    elif control.Title == "LEVE":
+        control.Checked = (valoracion_hechos[1] == "LEVE")
+    elif control.Title == "GRAVE":
+        control.Checked = (valoracion_hechos[1] == "GRAVE")
+    elif control.Title == "MUY GRAVE":
+        control.Checked = (valoracion_hechos[1] == "MUY GRAVE")
+    elif control.Title == "1SI":
+        control.Checked = (valoracion_hechos[2] == "SI")
+    elif control.Title == "1NO":
+        control.Checked = (valoracion_hechos[2] == "NO")
+    elif control.Title == "2SI":
+        control.Checked = (valoracion_hechos[3] == "SI")
+    elif control.Title == "2NO":
+        control.Checked = (valoracion_hechos[3] == "NO")
+    elif control.Title == "3SI":
+        control.Checked = (valoracion_hechos[4] == "SI")
+    elif control.Title == "3NO":
+        control.Checked = (valoracion_hechos[4] == "NO")
+    
     for index, image in enumerate(imagenes):
         image = re.sub(r"[<>[\]]","",image)
         image = image.split("/")[1]
