@@ -83,6 +83,8 @@ for control in doc.ContentControls:
         control.Checked = (valoracion_hechos[4] == "SI")
     elif control.Title == "3NO":
         control.Checked = (valoracion_hechos[4] == "NO")
+    elif control.Title == data['formas_accidente']:
+        control.Checked = (True)
     
     for index, image in enumerate(imagenes):
         image = re.sub(r"[<>[\]]","",image)
