@@ -1,8 +1,8 @@
 {
-    "nombre_trabajador": "Alexander, Luis",
+    "nombre_trabajador": "Hontar  Dos Santos, Valentino",
     "puesto_trabajo": "",
     "edad": 18,
-    "experiencia": 89282,
+    "experiencia": 882,
     "lugar_accidente": "",
     "hora_accidente": "",
     "fecha_accidente": "",
@@ -17,8 +17,8 @@
     "sexo": "M",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "bc600cef-fd90-4c7b-8fb3-32de589946c2",
-    "valoracionHechos": "ALTA,MUY GRAVE,NO,NO,NO",
+    "id": "49c24c8b-a91f-476d-9e41-5b2f404a627b",
+    "valoracionHechos": "BAJA,GRAVE,SI,SI,SI",
     "formas_accidente": "",
-    "analisis_causas": "[[\"Otros1\"],[\"Otros2\",\"Equipos, herramientas, medios auxiliares mal utilizados.\",\"Equipos, herramientas, medios auxiliares en mal estado.\"],[\"Otros3\"],[\"Otros4\",\"Inexistencia / fallo protecci\u00f3n contra contactos directos.\"],[],[],[],[]]"
+    "analisis_causas": "[[],[],[],[],[],[],[],[]]"
 }
