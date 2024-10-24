@@ -10,7 +10,21 @@ class TrabajadorSerializer(serializers.ModelSerializer):
 class ExpedienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Expediente
-        fields = ('id', 'trabajador', 'sexo', 'edad', 'puesto_trabajo','lugar_accidente', 'fecha_suceso', 'lesion', 'lesionado_check', 'descripcion_hechos', 'valoracion_hechos', 'formas_accidente')
+        fields = (
+            'id', 
+            'trabajador', 
+            'sexo', 
+            'edad', 
+            'puesto_trabajo',
+            'lugar_accidente', 
+            'fecha_suceso', 
+            'lesion', 
+            'lesionado_check', 
+            'descripcion_hechos', 
+            'valoracion_hechos', 
+            'formas_accidente', 
+            'analisis_causas'
+            )
         
 class ImagenesSerializer(serializers.ModelSerializer):
     class Meta:

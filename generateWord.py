@@ -3,6 +3,7 @@ import win32com.client as win32
 import os
 from pathlib import Path
 import re
+import json
 
 # Cargar datos desde un archivo JSON
 with open('json/expediente.json') as file:
@@ -31,6 +32,7 @@ reemplazos = {
 tipo_lesion = data['tipo_lesion']
 imagenes = data['imagenes'].split(",")
 valoracion_hechos = data["valoracionHechos"].split(",")
+analisis_causas = json.loads(data["analisis_causas"])
 
 if data['imagenes'] == "[]":
     imagenes = []
@@ -92,6 +94,11 @@ for control in doc.ContentControls:
         path_image = os.path.join(os.path.dirname(__file__), "media", "imagenes", image)
         if control.Title == f"Foto{index+1}":
             control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
+    
+    for lista in analisis_causas:
+        for tipo in lista:
+            if control.Title == tipo:
+                control.Checked = (True)
 
 # Guardar el documento modificado
 archivo = f"ficha_{data["id"]}.docx"

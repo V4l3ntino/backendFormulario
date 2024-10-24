@@ -17,7 +17,8 @@
     "sexo": "M",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "27fafea9-5111-41f4-b7d0-950a9e463622",
-    "valoracionHechos": "ALTA,MUY GRAVE,NO,SI,SI",
-    "formas_accidente": "Otros"
+    "id": "f0814deb-5aca-4644-941e-c785c929c3ef",
+    "valoracionHechos": "BAJA,LEVE,SI,SI,SI",
+    "formas_accidente": "",
+    "analisis_causas": "[[],[\"Otros2\"],[],[]]"
 }
