@@ -33,6 +33,8 @@ tipo_lesion = data['tipo_lesion']
 imagenes = data['imagenes'].split(",")
 valoracion_hechos = data["valoracionHechos"].split(",")
 analisis_causas = json.loads(data["analisis_causas"])
+causas_accidente = data["causas_accidente"].split(",")[1:]
+
 
 if data['imagenes'] == "[]":
     imagenes = []
@@ -43,6 +45,14 @@ for bookmark, value in reemplazos.items():
         doc.Bookmarks(bookmark).Range.Text = str(value)
 
 
+if doc.Bookmarks.Exists("lista_causas"):
+    bookmark = doc.Bookmarks("lista_causas").Range
+    bookmark.Text = ""
+    bookmark.ListFormat.ApplyBulletDefault()
+    for causa in causas_accidente:
+        bookmark.InsertAfter(causa)
+        bookmark.InsertParagraphAfter()
+            
 
 
 for control in doc.ContentControls:
