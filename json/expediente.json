@@ -1,11 +1,11 @@
 {
     "nombre_trabajador": "Hontar  Dos Santos, Valentino",
-    "puesto_trabajo": "",
+    "puesto_trabajo": "PULPOS",
     "edad": 18,
     "experiencia": 882,
-    "lugar_accidente": "",
-    "hora_accidente": "",
-    "fecha_accidente": "",
+    "lugar_accidente": "NAVE 3",
+    "hora_accidente": "01:37",
+    "fecha_accidente": "2024-10-25",
     "lesion": "",
     "tipo_lesion": [
         0,
@@ -14,12 +14,12 @@
         0
     ],
     "lesionado_check": false,
-    "sexo": "M",
+    "sexo": "H",
     "descripcion_hechos": "",
-    "imagenes": "[]",
-    "id": "de33db3d-808f-4065-af69-9c456bdae2ac",
-    "valoracionHechos": "BAJA,GRAVE,SI,SI,SI",
-    "formas_accidente": "",
-    "analisis_causas": "[[],[],[],[],[],[],[],[]]",
-    "causas_accidente": ",hola,adios"
+    "imagenes": "[<ImageFieldFile: imagenes/nick-moore-66aKwlV815c-unsplash_GvAji4P.jpg>, <ImageFieldFile: imagenes/mika-korhonen-Xodzxosar18-unsplash_Uqvjy4O.jpg>]",
+    "id": "b7591cf3-c496-4879-8628-6c40f983fb34",
+    "valoracionHechos": "BAJA,GRAVE,NO,NO,SI",
+    "formas_accidente": "Contacto con sustancias causticas y/o corrosivas.",
+    "analisis_causas": "[[\"Ausencia resguardos y/o dispositivos protecci\u00f3n\",\"Sistemas mando inseguros\",\"Paro emergencia inexistente \u00f3 ineficaz\",\"Dispositivos enclavamiento violados\",\"M\u00e1quina mal utilizada\",\"Riesgos debidos a movilidad m\u00e1quinas automotrices.\",\"Otros1\"],[],[],[],[],[],[],[]]",
+    "causas_accidente": ",Descripci\u00f3n de prueba"
 }
