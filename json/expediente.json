@@ -1,10 +1,10 @@
 {
-    "nombre_trabajador": "Hontar  Dos Santos, Valentino",
-    "puesto_trabajo": "",
+    "nombre_trabajador": "PORTEROS TORRES, ROSA CLONIRA",
+    "puesto_trabajo": "LAVADO",
     "edad": 18,
-    "experiencia": 882,
+    "experiencia": 200,
     "lugar_accidente": "",
-    "hora_accidente": "09:48",
+    "hora_accidente": "13:50",
     "fecha_accidente": "2024-10-28",
     "lesion": "",
     "tipo_lesion": [
@@ -17,10 +17,10 @@
     "sexo": "M",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "aff968c9-169d-4852-849b-ed15ba71281c",
+    "id": "b21ca69d-e342-4a31-a078-86d67e0d9bb9",
     "valoracionHechos": "ALTA,MUY GRAVE,NO,NO,NO",
     "formas_accidente": "",
     "analisis_causas": "[[],[],[],[],[],[],[],[]]",
     "causas_accidente": "",
-    "aplicar_accion": "[[\"Acci\u00f3n aplicar n\u00famero 1\",\"1\",\"Envasado\"],[\"Acci\u00f3n aplicar n\u00famero23\",\"2\",\"Planchas\"]]"
+    "aplicar_accion": "[]"
 }

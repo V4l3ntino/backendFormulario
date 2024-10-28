@@ -27,6 +27,7 @@ class Expediente(models.Model):
     analisis_causas = models.TextField(null=True, blank=True)
     causas_accidente = models.TextField(null=True, blank=True)
     aplicar_accion = models.TextField(null=True, blank=True)
+    itinere = models.BooleanField(default=False)
     def __str__(self):
         return f"Expediente de {self.trabajador.id}"
     
