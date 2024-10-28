@@ -1,11 +1,11 @@
 {
     "nombre_trabajador": "Hontar  Dos Santos, Valentino",
-    "puesto_trabajo": "PULPOS",
+    "puesto_trabajo": "",
     "edad": 18,
     "experiencia": 882,
-    "lugar_accidente": "NAVE 3",
-    "hora_accidente": "01:37",
-    "fecha_accidente": "2024-10-25",
+    "lugar_accidente": "",
+    "hora_accidente": "09:48",
+    "fecha_accidente": "2024-10-28",
     "lesion": "",
     "tipo_lesion": [
         0,
@@ -14,12 +14,13 @@
         0
     ],
     "lesionado_check": false,
-    "sexo": "H",
+    "sexo": "M",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "b7591cf3-c496-4879-8628-6c40f983fb34",
-    "valoracionHechos": "BAJA,GRAVE,NO,NO,SI",
-    "formas_accidente": "Contacto con sustancias causticas y/o corrosivas.",
-    "analisis_causas": "[[\"Ausencia resguardos y/o dispositivos protecci\u00f3n\",\"Sistemas mando inseguros\",\"Paro emergencia inexistente \u00f3 ineficaz\",\"Dispositivos enclavamiento violados\",\"M\u00e1quina mal utilizada\",\"Riesgos debidos a movilidad m\u00e1quinas automotrices.\",\"Otros1\"],[],[],[],[],[],[],[]]",
-    "causas_accidente": ",Descripci\u00f3n de prueba"
+    "id": "aff968c9-169d-4852-849b-ed15ba71281c",
+    "valoracionHechos": "ALTA,MUY GRAVE,NO,NO,NO",
+    "formas_accidente": "",
+    "analisis_causas": "[[],[],[],[],[],[],[],[]]",
+    "causas_accidente": "",
+    "aplicar_accion": "[[\"Acci\u00f3n aplicar n\u00famero 1\",\"1\",\"Envasado\"],[\"Acci\u00f3n aplicar n\u00famero23\",\"2\",\"Planchas\"]]"
 }

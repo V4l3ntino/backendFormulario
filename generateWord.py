@@ -34,6 +34,7 @@ imagenes = data['imagenes'].split(",")
 valoracion_hechos = data["valoracionHechos"].split(",")
 analisis_causas = json.loads(data["analisis_causas"])
 causas_accidente = data["causas_accidente"].split(",")[1:]
+acciones_aplicar = json.loads(data["aplicar_accion"])
 
 
 if data['imagenes'] == "[]":
@@ -114,6 +115,37 @@ for control in doc.ContentControls:
 archivo = f"ficha_{data["id"]}.docx"
 path_absolute_file_export = os.path.join(os.path.dirname(__file__), "media", "word", archivo)
 doc.SaveAs(path_absolute_file_export)
+
+bookmark_name="tabla_acciones"
+if doc.Bookmarks.Exists(bookmark_name):
+    # Selecciona el rango del marcador
+    bookmark_range = doc.Bookmarks(bookmark_name).Range
+    
+    # Asegúrate de que el marcador contiene una tabla y accede a ella
+    if bookmark_range.Tables.Count > 0:
+        table = bookmark_range.Tables(1)
+        new_row = table.Rows(2)
+        
+        new_row.Cells(1).Range.Text = acciones_aplicar[0][0]
+        new_row.Cells(2).Range.Text = acciones_aplicar[0][1]
+        new_row.Cells(3).Range.Text = acciones_aplicar[0][2]
+        
+        if(len(acciones_aplicar) > 1):
+            acciones_aplicar = acciones_aplicar[1:]        
+            for accion in acciones_aplicar:
+                # Añadir una nueva fila al final de la tabla
+                new_row = table.Rows.Add()
+                
+                # Rellenar las celdas de la nueva fila (ejemplo para una tabla de 3 columnas)
+                
+                new_row.Cells(1).Range.Text = accion[0]
+                new_row.Cells(2).Range.Text = accion[1]
+                new_row.Cells(3).Range.Text = accion[2]
+
+    else:
+        print("No se encontró una tabla en el marcador especificado.")
+else:
+    print("El marcador especificado no existe en el documento.")
 
 # Cerrar Word
 
