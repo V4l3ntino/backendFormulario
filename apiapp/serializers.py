@@ -24,7 +24,8 @@ class ExpedienteSerializer(serializers.ModelSerializer):
             'valoracion_hechos', 
             'formas_accidente', 
             'analisis_causas',
-            'causas_accidente'
+            'causas_accidente',
+            'aplicar_accion'
             )
         
 class ImagenesSerializer(serializers.ModelSerializer):

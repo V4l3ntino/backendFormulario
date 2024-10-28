@@ -16,7 +16,7 @@
     "lesionado_check": false,
     "sexo": "H",
     "descripcion_hechos": "",
-    "imagenes": "[<ImageFieldFile: imagenes/nick-moore-66aKwlV815c-unsplash_GvAji4P.jpg>, <ImageFieldFile: imagenes/mika-korhonen-Xodzxosar18-unsplash_Uqvjy4O.jpg>]",
+    "imagenes": "[]",
     "id": "b7591cf3-c496-4879-8628-6c40f983fb34",
     "valoracionHechos": "BAJA,GRAVE,NO,NO,SI",
     "formas_accidente": "Contacto con sustancias causticas y/o corrosivas.",
