@@ -1,11 +1,11 @@
 {
     "nombre_trabajador": "PORTEROS TORRES, ROSA CLONIRA",
-    "puesto_trabajo": "LAVADO",
+    "puesto_trabajo": "",
     "edad": 18,
     "experiencia": 200,
     "lugar_accidente": "",
-    "hora_accidente": "13:50",
-    "fecha_accidente": "2024-10-28",
+    "hora_accidente": "13:54",
+    "fecha_accidente": "2024-10-29",
     "lesion": "",
     "tipo_lesion": [
         0,
@@ -17,10 +17,10 @@
     "sexo": "M",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "b21ca69d-e342-4a31-a078-86d67e0d9bb9",
+    "id": "10a3dd83-2bd7-4652-86d6-de61a02b9f6f",
     "valoracionHechos": "ALTA,MUY GRAVE,NO,NO,NO",
     "formas_accidente": "",
     "analisis_causas": "[[],[],[],[],[],[],[],[]]",
-    "causas_accidente": "",
+    "causas_accidente": "[\"prueba con coma , intercalada\",\"prueba2 con coma intercalada , asdfasdf\",\"23aasdfax,,as\",\"prueba54\"]",
     "aplicar_accion": "[]"
 }

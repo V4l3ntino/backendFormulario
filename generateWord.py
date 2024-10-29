@@ -33,7 +33,7 @@ tipo_lesion = data['tipo_lesion']
 imagenes = data['imagenes'].split(",")
 valoracion_hechos = data["valoracionHechos"].split(",")
 analisis_causas = json.loads(data["analisis_causas"])
-causas_accidente = data["causas_accidente"].split(",")[1:]
+causas_accidente = json.loads(data["causas_accidente"])
 acciones_aplicar = json.loads(data["aplicar_accion"])
 
 
