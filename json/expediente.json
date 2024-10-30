@@ -1,11 +1,11 @@
 {
-    "nombre_trabajador": "PORTEROS TORRES, ROSA CLONIRA",
-    "puesto_trabajo": "",
+    "nombre_trabajador": "GARC\u00cdA PEREZ, MARCOS",
+    "puesto_trabajo": "PLANCHAS",
     "edad": 18,
-    "experiencia": 200,
+    "experiencia": 98,
     "lugar_accidente": "",
-    "hora_accidente": "13:54",
-    "fecha_accidente": "2024-10-29",
+    "hora_accidente": "12:34",
+    "fecha_accidente": "2024-10-30",
     "lesion": "",
     "tipo_lesion": [
         0,
@@ -14,13 +14,13 @@
         0
     ],
     "lesionado_check": false,
-    "sexo": "M",
+    "sexo": "H",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "10a3dd83-2bd7-4652-86d6-de61a02b9f6f",
+    "id": "e1f001d2-7b1c-4673-bf55-3246a4e94ad7",
     "valoracionHechos": "ALTA,MUY GRAVE,NO,NO,NO",
     "formas_accidente": "",
     "analisis_causas": "[[],[],[],[],[],[],[],[]]",
-    "causas_accidente": "[\"prueba con coma , intercalada\",\"prueba2 con coma intercalada , asdfasdf\",\"23aasdfax,,as\",\"prueba54\"]",
+    "causas_accidente": "[]",
     "aplicar_accion": "[]"
 }

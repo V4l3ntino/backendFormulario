@@ -10,7 +10,7 @@ import json
 import os
 # Create your views here.
 class ObtenerTrabajadorPorId(APIView):
-    def post(self, request, id):
+    def post(self, request, id, tipo):
         try:
             expediente = Expediente.objects.get(id=id)
             imagenes = Imagenes.objects.filter(expediente=expediente.id)
@@ -63,11 +63,21 @@ class ObtenerTrabajadorPorId(APIView):
                 json.dump(data, f, indent=4)
                 
             
-            result2 = subprocess.run(['python', "-m", "pip", "install", "-r", "requirements.txt"])
-            print(result2)
-            result = subprocess.run(['python', os.path.abspath("generateWord.py")])
-            print(result)
-         
-            return Response(status=status.HTTP_200_OK)
+            if(tipo == "completo"):
+                result2 = subprocess.run(['python', "-m", "pip", "install", "-r", "requirements.txt"])
+                print(result2)
+                result = subprocess.run(['python', os.path.abspath("generateWord.py")])
+                print(result)
+                return Response(status=status.HTTP_200_OK)
+            
+            elif(tipo == "simplificado"):
+                result2 = subprocess.run(['python', "-m", "pip", "install", "-r", "requirements.txt"])
+                print(result2)
+                result = subprocess.run(['python', os.path.abspath("generateWord2.py")])
+                print(result)
+                return Response(status=status.HTTP_200_OK)
+
+            return Response({"msg": "El método indicado no existe"},status=status.HTTP_404_NOT_FOUND)
+                    
         except Trabajador.DoesNotExist:
             return Response({'error': 'Expediente no encontrado'}, status=status.HTTP_404_NOT_FOUND)

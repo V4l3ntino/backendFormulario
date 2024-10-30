@@ -15,5 +15,5 @@ router.register('api/causas_accidente', CausasProducenAccidenteViewSet, 'apiCaus
 
 urlpatterns = router.urls
 urlpatterns += [
-    path('api/expediente/generate-word-document/<str:id>/', ObtenerTrabajadorPorId.as_view(), name='obtenerTrabajadorPorId'),
+    path('api/expediente/generate-word-document/<str:id>/<str:tipo>', ObtenerTrabajadorPorId.as_view(), name='obtenerTrabajadorPorId'),
 ]
