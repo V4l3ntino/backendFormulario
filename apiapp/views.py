@@ -54,7 +54,8 @@ class ObtenerTrabajadorPorId(APIView):
                 "formas_accidente": expediente.formas_accidente,
                 "analisis_causas": expediente.analisis_causas,
                 "causas_accidente": expediente.causas_accidente,
-                "aplicar_accion": expediente.aplicar_accion
+                "aplicar_accion": expediente.aplicar_accion,
+                "tipo_suceso": expediente.tipo_suceso
             }
             
             path_file = "json/expediente.json"
@@ -70,7 +71,7 @@ class ObtenerTrabajadorPorId(APIView):
                 print(result)
                 return Response(status=status.HTTP_200_OK)
             
-            elif(tipo == "simplificado"):
+            if(tipo == "simplificado"):
                 result2 = subprocess.run(['python', "-m", "pip", "install", "-r", "requirements.txt"])
                 print(result2)
                 result = subprocess.run(['python', os.path.abspath("generateWord2.py")])

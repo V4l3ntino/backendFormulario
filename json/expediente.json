@@ -22,5 +22,6 @@
     "formas_accidente": "",
     "analisis_causas": "[[],[],[],[],[],[],[],[]]",
     "causas_accidente": "[]",
-    "aplicar_accion": "[]"
+    "aplicar_accion": "[]",
+    "tipo_suceso": "Incidente"
 }
