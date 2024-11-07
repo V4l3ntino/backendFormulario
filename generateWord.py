@@ -27,7 +27,9 @@ reemplazos = {
     'fecha_accidente': data['fecha_accidente'],
     "descripcion_hechos": data['descripcion_hechos'],
     'lesion': data['lesion'],
-    'tipo_suceso': data['tipo_suceso']
+    'tipo_suceso': data['tipo_suceso'],
+    'creador': data['creador'],
+    'fecha_investigacion': data['fecha_investigacion']
 }
 
 tipo_lesion = data['tipo_lesion']

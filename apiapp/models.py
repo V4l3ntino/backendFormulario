@@ -29,6 +29,8 @@ class Expediente(models.Model):
     aplicar_accion = models.TextField(null=True, blank=True)
     itinere = models.BooleanField(default=False)
     tipo_suceso = models.TextField(null=True, blank=True)
+    creador = models.TextField(null=True, blank=True)
+    fecha_investigacion = models.CharField(max_length=16, null=True)
     def __str__(self):
         return f"Expediente de {self.trabajador.id}"
     
@@ -52,4 +54,8 @@ class FormaProducirseAccidente(models.Model):
     
 class CausasProducenAccidente(models.Model):
     id = models.IntegerField(primary_key=True)
+    nombre = models.TextField()
+
+class Creador(models.Model):
+    id = models.AutoField(primary_key=True)
     nombre = models.TextField()

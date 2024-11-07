@@ -55,7 +55,9 @@ class ObtenerTrabajadorPorId(APIView):
                 "analisis_causas": expediente.analisis_causas,
                 "causas_accidente": expediente.causas_accidente,
                 "aplicar_accion": expediente.aplicar_accion,
-                "tipo_suceso": expediente.tipo_suceso
+                "tipo_suceso": expediente.tipo_suceso,
+                "creador": expediente.creador,
+                "fecha_investigacion": expediente.fecha_investigacion
             }
             
             path_file = "json/expediente.json"

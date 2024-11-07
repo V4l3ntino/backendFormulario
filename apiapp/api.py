@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions, status
-from .models import Trabajador, Expediente, Imagenes, PuestoTrabajo, LugarAccidente, FormaProducirseAccidente, CausasProducenAccidente
-from .serializers import TrabajadorSerializer, ExpedienteSerializer, ImagenesSerializer, PuestoTrabajoSerializer, LugarAccidenteSerializer, FormaProducirseAccidenteSerializer, CausasProducenAccidenteSerializer
+from .models import Trabajador, Expediente, Imagenes, PuestoTrabajo, LugarAccidente, FormaProducirseAccidente, CausasProducenAccidente, Creador
+from .serializers import TrabajadorSerializer, ExpedienteSerializer, ImagenesSerializer, PuestoTrabajoSerializer, LugarAccidenteSerializer, FormaProducirseAccidenteSerializer, CausasProducenAccidenteSerializer, CreadorSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -56,4 +56,13 @@ class CausasProducenAccidenteViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['delete'])
     def deleteall(self, request):
         CausasProducenAccidente.objects.all().delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class CreadorViewSet(viewsets.ModelViewSet):
+    queryset = Creador.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = CreadorSerializer
+    @action(detail=False, methods=['delete'])
+    def deleteall(self, request):
+        Creador.objects.all().delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

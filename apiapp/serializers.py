@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Trabajador, Expediente, Imagenes, PuestoTrabajo, LugarAccidente, FormaProducirseAccidente, CausasProducenAccidente
+from .models import Trabajador, Expediente, Imagenes, PuestoTrabajo, LugarAccidente, FormaProducirseAccidente, CausasProducenAccidente, Creador
 
 class TrabajadorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,7 +27,9 @@ class ExpedienteSerializer(serializers.ModelSerializer):
             'causas_accidente',
             'aplicar_accion',
             'itinere',
-            'tipo_suceso'
+            'tipo_suceso',
+            'creador',
+            'fecha_investigacion'
             )
         
 class ImagenesSerializer(serializers.ModelSerializer):
@@ -54,4 +56,9 @@ class FormaProducirseAccidenteSerializer(serializers.ModelSerializer):
 class CausasProducenAccidenteSerializer(serializers.ModelSerializer):
     class Meta:
         model = CausasProducenAccidente
+        fields = ('id', 'nombre')
+
+class CreadorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Creador
         fields = ('id', 'nombre')

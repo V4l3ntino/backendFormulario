@@ -1,11 +1,11 @@
 {
     "nombre_trabajador": "GARC\u00cdA PEREZ, MARCOS",
-    "puesto_trabajo": "PLANCHAS",
+    "puesto_trabajo": "AUTOS",
     "edad": 18,
     "experiencia": 98,
-    "lugar_accidente": "",
-    "hora_accidente": "12:34",
-    "fecha_accidente": "2024-10-30",
+    "lugar_accidente": "NAVE 1",
+    "hora_accidente": "11:09",
+    "fecha_accidente": "2024-11-07",
     "lesion": "",
     "tipo_lesion": [
         0,
@@ -14,14 +14,16 @@
         0
     ],
     "lesionado_check": false,
-    "sexo": "H",
+    "sexo": "M",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "e1f001d2-7b1c-4673-bf55-3246a4e94ad7",
+    "id": "20587ae8-7ee6-43a3-a733-9cc79be0ce42",
     "valoracionHechos": "ALTA,MUY GRAVE,NO,NO,NO",
-    "formas_accidente": "",
+    "formas_accidente": "Ca\u00edda a distinto nivel.",
     "analisis_causas": "[[],[],[],[],[],[],[],[]]",
-    "causas_accidente": "[]",
-    "aplicar_accion": "[]",
-    "tipo_suceso": "Incidente"
+    "causas_accidente": "[\"Probando\",\"Probando2\"]",
+    "aplicar_accion": "[[\"Acci\u00f3n de prueba\",\"1\",\"Envasado\"],[\"Acci\u00f3n de prueba2\",\"1\",\"Envasado\"]]",
+    "tipo_suceso": "Accidente con baja",
+    "creador": "Manu",
+    "fecha_investigacion": "2024-11-07T11:09"
 }

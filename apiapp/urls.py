@@ -1,6 +1,6 @@
 from rest_framework import routers
 from django.urls import path
-from .api import TrabajadorViewSet, ExpedienteViewSet, ImagenesViewSet, PuestoTrabajoViewSet, LugarAccidenteViewSet, FormaProducirseAccidenteViewSet, CausasProducenAccidenteViewSet
+from .api import TrabajadorViewSet, ExpedienteViewSet, ImagenesViewSet, PuestoTrabajoViewSet, LugarAccidenteViewSet, FormaProducirseAccidenteViewSet, CausasProducenAccidenteViewSet, CreadorViewSet
 from .views import ObtenerTrabajadorPorId
 
 router = routers.DefaultRouter()
@@ -12,6 +12,7 @@ router.register('api/puesto_trabajo', PuestoTrabajoViewSet, 'apiPuestoTrabajo')
 router.register('api/lugar_accidente', LugarAccidenteViewSet, 'apiLugarAccidente')
 router.register('api/forma_producirse_accidente', FormaProducirseAccidenteViewSet, 'apiFormaProducirseAccidente')
 router.register('api/causas_accidente', CausasProducenAccidenteViewSet, 'apiCausasAccidente')
+router.register('api/creador', CreadorViewSet, 'apiCreador')
 
 urlpatterns = router.urls
 urlpatterns += [
