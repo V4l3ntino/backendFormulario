@@ -29,7 +29,8 @@ class ExpedienteSerializer(serializers.ModelSerializer):
             'itinere',
             'tipo_suceso',
             'creador',
-            'fecha_investigacion'
+            'fecha_investigacion',
+            'otros'
             )
         
 class ImagenesSerializer(serializers.ModelSerializer):
