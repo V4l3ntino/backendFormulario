@@ -62,3 +62,16 @@ class CausasProducenAccidente(models.Model):
 class Creador(models.Model):
     id = models.AutoField(primary_key=True)
     nombre = models.TextField()
+
+class ParteCuerpo(models.Model):
+    id = models.IntegerField(primary_key=True)
+    nombre = models.TextField()
+
+class Agente(models.Model):
+    id = models.IntegerField(primary_key=True)
+    nombre = models.TextField()
+
+class FormaProducirse(models.Model):
+    id = models.IntegerField(primary_key=True)
+    nombre = models.TextField()
+

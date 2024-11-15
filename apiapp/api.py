@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions, status
-from .models import Trabajador, Expediente, Imagenes, PuestoTrabajo, LugarAccidente, FormaProducirseAccidente, CausasProducenAccidente, Creador
-from .serializers import TrabajadorSerializer, ExpedienteSerializer, ImagenesSerializer, PuestoTrabajoSerializer, LugarAccidenteSerializer, FormaProducirseAccidenteSerializer, CausasProducenAccidenteSerializer, CreadorSerializer
+from .models import Trabajador, Expediente, Imagenes, PuestoTrabajo, LugarAccidente, FormaProducirseAccidente, CausasProducenAccidente, Creador, ParteCuerpo, Agente, FormaProducirse
+from .serializers import TrabajadorSerializer, ExpedienteSerializer, ImagenesSerializer, PuestoTrabajoSerializer, LugarAccidenteSerializer, FormaProducirseAccidenteSerializer, CausasProducenAccidenteSerializer, CreadorSerializer, ParteCuerpoSerializer, AgenteSerializer, FormaProducirseSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -65,4 +65,31 @@ class CreadorViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['delete'])
     def deleteall(self, request):
         Creador.objects.all().delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class ParteCuerpoViewSet(viewsets.ModelViewSet):
+    queryset = ParteCuerpo.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = ParteCuerpoSerializer
+    @action(detail=False, methods=['delete'])
+    def deleteall(self, request):
+        ParteCuerpo.objects.all().delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class AgenteViewSet(viewsets.ModelViewSet):
+    queryset = Agente.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = AgenteSerializer
+    @action(detail=False, methods=['delete'])
+    def deleteall(self, request):
+        Agente.objects.all().delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class FormaProducirseViewSet(viewsets.ModelViewSet):
+    queryset = FormaProducirse.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = FormaProducirseSerializer
+    @action(detail=False, methods=['delete'])
+    def deleteall(self, request):
+        FormaProducirse.objects.all().delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
