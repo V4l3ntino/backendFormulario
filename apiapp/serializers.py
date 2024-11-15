@@ -30,7 +30,8 @@ class ExpedienteSerializer(serializers.ModelSerializer):
             'tipo_suceso',
             'creador',
             'fecha_investigacion',
-            'otros'
+            'otros',
+            'empresa'
             )
         
 class ImagenesSerializer(serializers.ModelSerializer):

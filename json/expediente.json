@@ -4,8 +4,8 @@
     "edad": 18,
     "experiencia": 301,
     "lugar_accidente": "NAVE 1",
-    "hora_accidente": "12:03",
-    "fecha_accidente": "2024-11-12",
+    "hora_accidente": "13:51",
+    "fecha_accidente": "2024-11-14",
     "lesion": "",
     "tipo_lesion": [
         0,
@@ -17,13 +17,13 @@
     "sexo": "M",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "b4d4e755-41a9-4a52-970a-d3605b2227d2",
+    "id": "f41953d4-5a68-47b6-af9d-bc2900e4c6b9",
     "valoracionHechos": "ALTA,MUY GRAVE,NO,NO,NO",
-    "formas_accidente": "No se ha simbolizado correctamente la carretera asdfNo se ha simbolizado correctamente la carretera",
+    "formas_accidente": "Ca\u00edda a distinto nivel.",
     "analisis_causas": "[[],[],[],[],[],[],[],[]]",
     "causas_accidente": "[]",
     "aplicar_accion": "[]",
     "tipo_suceso": "Accidente con baja",
-    "creador": "Jose",
-    "fecha_investigacion": "2024-11-12T12:03"
+    "creador": "Paco",
+    "fecha_investigacion": "2024-11-14T13:51"
 }

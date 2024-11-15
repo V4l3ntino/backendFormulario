@@ -32,6 +32,8 @@ class Expediente(models.Model):
     creador = models.TextField(null=True, blank=True)
     fecha_investigacion = models.CharField(max_length=16, null=True)
     otros = models.BooleanField(default=False)
+    empresa = models.TextField(null=True, blank=True)
+    
     def __str__(self):
         return f"Expediente de {self.trabajador.id}"
     
