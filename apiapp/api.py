@@ -15,6 +15,10 @@ class ExpedienteViewSet(viewsets.ModelViewSet):
     queryset = Expediente.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = ExpedienteSerializer
+    @action(detail=False, methods=['delete'])
+    def deleteall(self, request):
+        Expediente.objects.all().delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
     
 class ImagenesViewSet(viewsets.ModelViewSet):
     queryset = Imagenes.objects.all()

@@ -31,7 +31,10 @@ class ExpedienteSerializer(serializers.ModelSerializer):
             'creador',
             'fecha_investigacion',
             'otros',
-            'empresa'
+            'empresa',
+            'parte_cuerpo',
+            'agente',
+            'forma_producirse'
             )
         
 class ImagenesSerializer(serializers.ModelSerializer):
