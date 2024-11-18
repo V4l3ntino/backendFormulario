@@ -1,7 +1,7 @@
 from rest_framework import routers
 from django.urls import path
 from .api import TrabajadorViewSet, ExpedienteViewSet, ImagenesViewSet, PuestoTrabajoViewSet, LugarAccidenteViewSet, FormaProducirseAccidenteViewSet, CausasProducenAccidenteViewSet, CreadorViewSet, ParteCuerpoViewSet, AgenteViewSet, FormaProducirseViewSet
-from .views import ObtenerTrabajadorPorId
+from .views import ObtenerTrabajadorPorId, ExportarExcel
 
 router = routers.DefaultRouter()
 
@@ -20,4 +20,5 @@ router.register('api/forma_producirse', FormaProducirseViewSet, 'formaProducirse
 urlpatterns = router.urls
 urlpatterns += [
     path('api/expediente/generate-word-document/<str:id>/<str:tipo>', ObtenerTrabajadorPorId.as_view(), name='obtenerTrabajadorPorId'),
+    path('api/expediente/generate-excel-document', ExportarExcel.as_view(), name="obtenerExcel")
 ]

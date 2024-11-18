@@ -8,6 +8,7 @@ from .serializers import TrabajadorSerializer, ExpedienteSerializer
 import subprocess
 import json
 import os
+import openpyxl
 # Create your views here.
 class ObtenerTrabajadorPorId(APIView):
     def post(self, request, id, tipo):
@@ -84,3 +85,102 @@ class ObtenerTrabajadorPorId(APIView):
                     
         except Trabajador.DoesNotExist:
             return Response({'error': 'Expediente no encontrado'}, status=status.HTTP_404_NOT_FOUND)
+        
+
+class ExportarExcel(APIView):
+    def post(self, request):
+        try:
+            expediente = Expediente.objects.all()
+            expedientes_catal = []
+            expedientes_publindal = []
+            for exp in expediente:
+                if exp.empresa == "Catal":
+                    expedientes_catal.append(exp)
+                elif exp.empresa == "Publindal":
+                    expedientes_publindal.append(exp)
+            
+            wb = openpyxl.Workbook()
+            ws = wb.active
+            
+            ws.title = "CATAL"
+            ws['A1'] = "TIPO DE SUCESO"
+            ws['B1'] = "EMPRESA"
+            ws['C1'] = "FECHA"
+            ws['D1'] = "HORA"
+            ws['E1'] = "NOMBRE Y APELLIDOS"
+            ws['F1'] = "PUESTO"
+            ws['G1'] = "DESCIPCIÓN"
+            ws['H1'] = "AGENTE"
+            ws['I1'] = "PARTE DEL CUERPO"
+            ws['J1'] = "FORMA DE PRODUCIRSE"
+            
+            
+            ws2 = wb.create_sheet(title="PUBLINDAL")
+            ws2['A1'] = "TIPO DE SUCESO"
+            ws2['B1'] = "EMPRESA"
+            ws2['C1'] = "FECHA"
+            ws2['D1'] = "HORA"
+            ws2['E1'] = "NOMBRE Y APELLIDOS"
+            ws2['F1'] = "PUESTO"
+            ws2['G1'] = "DESCIPCIÓN"
+            ws2['H1'] = "AGENTE"
+            ws2['I1'] = "PARTE DEL CUERPO"
+            ws2['J1'] = "FORMA DE PRODUCIRSE"
+            
+            for index, exp in enumerate(expedientes_catal):
+                index+=2
+                cTipo = f"A{index}"
+                cEmpresa = f"B{index}"
+                cFecha = f"C{index}"
+                cHora = f"D{index}"
+                cNombreApellidos = f"E{index}"
+                cPuesto = f"F{index}"
+                cDescripcion = f"G{index}"
+                cAgente = f"H{index}"
+                cParteCuerpo = f"I{index}"
+                cFormaProducirse = f"J{index}"
+                
+                ws[cTipo] = exp.tipo_suceso
+                ws[cEmpresa] = exp.empresa
+                ws[cFecha] = exp.fecha_suceso.split("T")[0]
+                ws[cHora] = exp.fecha_suceso.split("T")[1]
+                ws[cNombreApellidos] = f"{exp.trabajador.nombre} {exp.trabajador.apellido}"
+                ws[cPuesto] = exp.puesto_trabajo
+                ws[cDescripcion] = exp.descripcion_hechos
+                ws[cAgente] = exp.agente
+                ws[cParteCuerpo] = exp.parte_cuerpo
+                ws[cFormaProducirse] = exp.forma_producirse
+                
+            for index, exp in enumerate(expedientes_publindal):
+                index+=2
+                cTipo = f"A{index}"
+                cEmpresa = f"B{index}"
+                cFecha = f"C{index}"
+                cHora = f"D{index}"
+                cNombreApellidos = f"E{index}"
+                cPuesto = f"F{index}"
+                cDescripcion = f"G{index}"
+                cAgente = f"H{index}"
+                cParteCuerpo = f"I{index}"
+                cFormaProducirse = f"J{index}"
+                
+                ws2[cTipo] = exp.tipo_suceso
+                ws2[cEmpresa] = exp.empresa
+                ws2[cFecha] = exp.fecha_suceso.split("T")[0]
+                ws2[cHora] = exp.fecha_suceso.split("T")[1]
+                ws2[cNombreApellidos] = f"{exp.trabajador.nombre} {exp.trabajador.apellido}"
+                ws2[cPuesto] = exp.puesto_trabajo
+                ws2[cDescripcion] = exp.descripcion_hechos
+                ws2[cAgente] = exp.agente
+                ws2[cParteCuerpo] = exp.parte_cuerpo
+                ws2[cFormaProducirse] = exp.forma_producirse
+                
+            
+            doc = os.path.abspath('media/excel/expedientes.xlsx')
+            wb.save(doc)
+            
+            return Response(status=status.HTTP_200_OK)
+        except Exception as e: 
+            print(e)
+            return Response({'error': 'Algo ha salido mal'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR) 
+        

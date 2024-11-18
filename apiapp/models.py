@@ -38,7 +38,7 @@ class Expediente(models.Model):
     forma_producirse = models.TextField(null=True, blank=True)
     
     def __str__(self):
-        return f"Expediente de {self.trabajador.id}"
+        return f"Expediente de {self.trabajador.nombre}"
     
     
 class Imagenes(models.Model):
