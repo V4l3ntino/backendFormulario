@@ -146,7 +146,7 @@ class ExportarExcel(APIView):
                 ws[cHora] = exp.fecha_suceso.split("T")[1]
                 ws[cNombreApellidos] = f"{exp.trabajador.nombre} {exp.trabajador.apellido}"
                 ws[cPuesto] = exp.puesto_trabajo
-                ws[cDescripcion] = exp.descripcion_hechos
+                ws[cDescripcion] = exp.lesion.split("|")[1]
                 ws[cAgente] = exp.agente
                 ws[cParteCuerpo] = exp.parte_cuerpo
                 ws[cFormaProducirse] = exp.forma_producirse
@@ -170,7 +170,7 @@ class ExportarExcel(APIView):
                 ws2[cHora] = exp.fecha_suceso.split("T")[1]
                 ws2[cNombreApellidos] = f"{exp.trabajador.nombre} {exp.trabajador.apellido}"
                 ws2[cPuesto] = exp.puesto_trabajo
-                ws2[cDescripcion] = exp.descripcion_hechos
+                ws2[cDescripcion] = exp.lesion.split("|")[1]
                 ws2[cAgente] = exp.agente
                 ws2[cParteCuerpo] = exp.parte_cuerpo
                 ws2[cFormaProducirse] = exp.forma_producirse
