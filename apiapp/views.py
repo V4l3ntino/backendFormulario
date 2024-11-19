@@ -55,7 +55,7 @@ class ObtenerTrabajadorPorId(APIView):
                 "formas_accidente": expediente.formas_accidente,
                 "analisis_causas": expediente.analisis_causas,
                 "causas_accidente": expediente.causas_accidente,
-                "aplicar_accion": expediente.aplicar_accion,
+                "aplicar_accion": expediente.aplicar_accion.upper(),
                 "tipo_suceso": expediente.tipo_suceso,
                 "creador": expediente.creador,
                 "fecha_investigacion": expediente.fecha_investigacion,
