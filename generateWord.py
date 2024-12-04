@@ -36,6 +36,12 @@ reemplazos = {
 tipo_lesion = data['tipo_lesion']
 imagenes = data['imagenes'].split(",")
 valoracion_hechos = data["valoracionHechos"].split(",")
+valoracion_hechos[2] = "NO" if valoracion_hechos[2] == "" or valoracion_hechos[2] == "NO" else "SI"
+valoracion_hechos[3] = "NO" if valoracion_hechos[3] == "" or valoracion_hechos[3] == "NO" else "SI"
+valoracion_hechos[4] = "NO" if valoracion_hechos[4] == "" or valoracion_hechos[4] == "NO" else "SI"
+
+print(valoracion_hechos)
+
 analisis_causas = json.loads(data["analisis_causas"])
 causas_accidente = json.loads(data["causas_accidente"])
 acciones_aplicar = json.loads(data["aplicar_accion"])
