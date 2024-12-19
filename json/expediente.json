@@ -1,11 +1,11 @@
 {
-    "nombre_trabajador": "GIMENEZ HERNANDEZ,  PEDRO JESUS",
+    "nombre_trabajador": "AYUSO GALLEGO,  ANTONIA",
     "puesto_trabajo": "Nave 1",
     "edad": 18,
-    "experiencia": 86,
+    "experiencia": 117,
     "lugar_accidente": "mosc\u00fa",
-    "hora_accidente": "14:13",
-    "fecha_accidente": "04/12/2024",
+    "hora_accidente": "13:01",
+    "fecha_accidente": "19/12/2024",
     "lesion": "",
     "tipo_lesion": [
         0,
@@ -17,14 +17,14 @@
     "sexo": "M",
     "descripcion_hechos": "",
     "imagenes": "[]",
-    "id": "4c9ad438-9cd7-46f4-abee-756d6ba04985",
-    "valoracionHechos": ",,,SI,",
+    "id": "30ea49b6-d1f3-4ce7-85b9-54fe2ab16795",
+    "valoracionHechos": ",,,,",
     "formas_accidente": "",
     "analisis_causas": "[[],[],[],[],[],[],[],[]]",
-    "causas_accidente": "[]",
-    "aplicar_accion": "[[\"ASDFASDFASDF\",\"1\",\"TALLER\",\"2024-12-19\"],[\"DSFASDFA\",\"2\",\"ALMACEN\",\"2024-12-19\"]]",
+    "causas_accidente": "[\"asfasd\"]",
+    "aplicar_accion": "[[\"ASDFASDF\",\"1\",\"TALLER\",\"2024-12-19\"],[\"ASDFASDF\",\"4\",\"ALMACEN\",\"2024-12-19\"],[\"ASDFASDF\",\"1\",\"TALLER\",\"2024-12-07\"]]",
     "tipo_suceso": "Accidente con baja",
-    "creador": "pablo",
-    "fecha_investigacion": "2024-12-04T14:13",
-    "empresa": "PUBLINDAL"
+    "creador": "Jose",
+    "fecha_investigacion": "19/12/2024 - 13:01",
+    "empresa": "CATAL"
 }

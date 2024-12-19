@@ -135,14 +135,7 @@ if doc.Bookmarks.Exists(bookmark_name) and len(acciones_aplicar) > 0:
     # Asegúrate de que el marcador contiene una tabla y accede a ella
     if bookmark_range.Tables.Count > 0:
         table = bookmark_range.Tables(1)
-        new_row = table.Rows(2)
-        
-        new_row.Cells(1).Range.Text = acciones_aplicar[0][0]
-        new_row.Cells(2).Range.Text = acciones_aplicar[0][1]
-        new_row.Cells(3).Range.Text = acciones_aplicar[0][2]
-        
-        if(len(acciones_aplicar) > 1):
-            acciones_aplicar = acciones_aplicar[1:]        
+        if(len(acciones_aplicar) > 1):     
             for accion in acciones_aplicar:
                 # Añadir una nueva fila al final de la tabla
                 new_row = table.Rows.Add()
@@ -162,22 +155,17 @@ if doc.Bookmarks.Exists(bookmark_name) and len(acciones_aplicar) > 0:
     
     if bookmark_range.Tables.Count > 0:
         table = bookmark_range.Tables(1)
-        new_row = table.Rows(2)
-        
-        new_row.Cells(1).Range.Text = acciones_aplicar[0][0]
-        new_row.Cells(2).Range.Text = acciones_aplicar[0][1]
-        new_row.Cells(4).Range.Text = acciones_aplicar[0][2]
-        new_row.Cells(5).Range.Text = acciones_aplicar[0][3]
-        
         if(len(acciones_aplicar) > 1):
-            acciones_aplicar = acciones_aplicar[1:]
             for accion in acciones_aplicar:
                 new_row = table.Rows.Add()
+                
+                fechaSplit = accion[3].split("-")
+                fechaFormatted = f"{fechaSplit[2]}/{fechaSplit[1]}/{fechaSplit[0]}"
                 
                 new_row.Cells(1).Range.Text = accion[0]
                 new_row.Cells(2).Range.Text = accion[1]
                 new_row.Cells(4).Range.Text = accion[2]
-                new_row.Cells(5).Range.Text = accion[3]
+                new_row.Cells(5).Range.Text = fechaFormatted
 
 
 if not controlBox:    

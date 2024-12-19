@@ -126,21 +126,14 @@ path_absolute_file_export = os.path.join(os.path.dirname(__file__), "media", "wo
 doc.SaveAs(path_absolute_file_export)
 
 bookmark_name="tabla_acciones"
-if doc.Bookmarks.Exists(bookmark_name):
+if doc.Bookmarks.Exists(bookmark_name) and len(acciones_aplicar) > 0:
     # Selecciona el rango del marcador
     bookmark_range = doc.Bookmarks(bookmark_name).Range
     
     # Asegúrate de que el marcador contiene una tabla y accede a ella
     if bookmark_range.Tables.Count > 0:
         table = bookmark_range.Tables(1)
-        new_row = table.Rows(2)
-        
-        new_row.Cells(1).Range.Text = acciones_aplicar[0][0]
-        new_row.Cells(2).Range.Text = acciones_aplicar[0][1]
-        new_row.Cells(3).Range.Text = acciones_aplicar[0][2]
-        
-        if(len(acciones_aplicar) > 1):
-            acciones_aplicar = acciones_aplicar[1:]        
+        if(len(acciones_aplicar) > 1):     
             for accion in acciones_aplicar:
                 # Añadir una nueva fila al final de la tabla
                 new_row = table.Rows.Add()
@@ -153,8 +146,6 @@ if doc.Bookmarks.Exists(bookmark_name):
 
     else:
         print("No se encontró una tabla en el marcador especificado.")
-else:
-    print("El marcador especificado no existe en el documento.")
 
 # Cerrar Word
 

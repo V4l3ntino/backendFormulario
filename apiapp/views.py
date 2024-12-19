@@ -37,6 +37,11 @@ class ObtenerTrabajadorPorId(APIView):
                 fecha = expediente.fecha_suceso.split("T")[0]
                 fechaSplit = fecha.split("-")
                 fechaFormatted = f"{fechaSplit[2]}/{fechaSplit[1]}/{fechaSplit[0]}"
+
+                horaInvestigacion = expediente.fecha_investigacion.split("T")[1]
+                fecha = expediente.fecha_investigacion.split("T")[0]
+                fechaSplit = fecha.split("-")
+                fechaInvestigacionFormatted = f"{fechaSplit[2]}/{fechaSplit[1]}/{fechaSplit[0]}"
             
             data = {
                 "nombre_trabajador": f"{expediente.trabajador.apellido}, {expediente.trabajador.nombre}",
@@ -60,7 +65,7 @@ class ObtenerTrabajadorPorId(APIView):
                 "aplicar_accion": expediente.aplicar_accion.upper(),
                 "tipo_suceso": expediente.tipo_suceso,
                 "creador": expediente.creador,
-                "fecha_investigacion": expediente.fecha_investigacion,
+                "fecha_investigacion": f"{fechaInvestigacionFormatted} - {horaInvestigacion}",
                 "empresa": expediente.empresa.upper()
             }
             
