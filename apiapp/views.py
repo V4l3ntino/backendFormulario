@@ -38,10 +38,12 @@ class ObtenerTrabajadorPorId(APIView):
                 fechaSplit = fecha.split("-")
                 fechaFormatted = f"{fechaSplit[2]}/{fechaSplit[1]}/{fechaSplit[0]}"
 
-                horaInvestigacion = expediente.fecha_investigacion.split("T")[1]
-                fecha = expediente.fecha_investigacion.split("T")[0]
-                fechaSplit = fecha.split("-")
-                fechaInvestigacionFormatted = f"{fechaSplit[2]}/{fechaSplit[1]}/{fechaSplit[0]}"
+            horaInvestigacion = expediente.fecha_investigacion.split("T")[1]
+            fecha = expediente.fecha_investigacion.split("T")[0]
+            fechaSplit = fecha.split("-")
+            fechaInvestigacionFormatted = f"{fechaSplit[2]}/{fechaSplit[1]}/{fechaSplit[0]}"
+            
+            empresa = "EMPRESA: PUBLINDAL, SL" if expediente.empresa.upper() == "PUBLINDAL" else "EMPRESA: MKTO CATAL IMPORTACIONES, S.L."
             
             data = {
                 "nombre_trabajador": f"{expediente.trabajador.apellido}, {expediente.trabajador.nombre}",
@@ -66,7 +68,7 @@ class ObtenerTrabajadorPorId(APIView):
                 "tipo_suceso": expediente.tipo_suceso,
                 "creador": expediente.creador,
                 "fecha_investigacion": f"{fechaInvestigacionFormatted} - {horaInvestigacion}",
-                "empresa": expediente.empresa.upper()
+                "empresa": empresa
             }
             
             path_file = "json/expediente.json"
