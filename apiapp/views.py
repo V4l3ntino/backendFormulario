@@ -35,6 +35,8 @@ class ObtenerTrabajadorPorId(APIView):
             if(expediente.fecha_suceso):
                 hora = expediente.fecha_suceso.split("T")[1]
                 fecha = expediente.fecha_suceso.split("T")[0]
+                fechaSplit = fecha.split("-")
+                fechaFormatted = f"{fechaSplit[2]}/{fechaSplit[1]}/{fechaSplit[0]}"
             
             data = {
                 "nombre_trabajador": f"{expediente.trabajador.apellido}, {expediente.trabajador.nombre}",
@@ -43,7 +45,7 @@ class ObtenerTrabajadorPorId(APIView):
                 "experiencia": expediente.trabajador.experiencia,
                 "lugar_accidente": expediente.lugar_accidente,
                 "hora_accidente": f"{hora}",
-                "fecha_accidente": f"{fecha}",
+                "fecha_accidente": f"{fechaFormatted}",
                 "lesion": lesion[1],
                 "tipo_lesion": tipo_lesion,
                 "lesionado_check": expediente.lesionado_check,

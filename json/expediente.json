@@ -5,7 +5,7 @@
     "experiencia": 86,
     "lugar_accidente": "mosc\u00fa",
     "hora_accidente": "14:13",
-    "fecha_accidente": "2024-12-04",
+    "fecha_accidente": "04/12/2024",
     "lesion": "",
     "tipo_lesion": [
         0,
@@ -22,7 +22,7 @@
     "formas_accidente": "",
     "analisis_causas": "[[],[],[],[],[],[],[],[]]",
     "causas_accidente": "[]",
-    "aplicar_accion": "[]",
+    "aplicar_accion": "[[\"ASDFASDFASDF\",\"1\",\"TALLER\",\"2024-12-19\"],[\"DSFASDFA\",\"2\",\"ALMACEN\",\"2024-12-19\"]]",
     "tipo_suceso": "Accidente con baja",
     "creador": "pablo",
     "fecha_investigacion": "2024-12-04T14:13",
