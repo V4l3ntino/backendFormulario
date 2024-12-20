@@ -45,6 +45,9 @@ class ObtenerTrabajadorPorId(APIView):
             
             empresa = "EMPRESA: PUBLINDAL, SL" if expediente.empresa.upper() == "PUBLINDAL" else "EMPRESA: MKTO CATAL IMPORTACIONES, S.L."
             
+            aplicar_accion = expediente.aplicar_accion.upper().replace("\\N", " ")
+            causas_accidente = expediente.causas_accidente.upper().replace("\\N", " ")
+            
             data = {
                 "nombre_trabajador": f"{expediente.trabajador.apellido}, {expediente.trabajador.nombre}",
                 "puesto_trabajo": expediente.puesto_trabajo,
@@ -63,8 +66,8 @@ class ObtenerTrabajadorPorId(APIView):
                 "valoracionHechos": expediente.valoracion_hechos,
                 "formas_accidente": expediente.formas_accidente,
                 "analisis_causas": expediente.analisis_causas,
-                "causas_accidente": expediente.causas_accidente,
-                "aplicar_accion": expediente.aplicar_accion.upper(),
+                "causas_accidente": causas_accidente,
+                "aplicar_accion": aplicar_accion,
                 "tipo_suceso": expediente.tipo_suceso,
                 "creador": expediente.creador,
                 "fecha_investigacion": f"{fechaInvestigacionFormatted} - {horaInvestigacion}",

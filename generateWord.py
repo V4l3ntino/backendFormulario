@@ -114,7 +114,7 @@ for control in doc.ContentControls:
         image = re.sub(r"[<>[\]]","",image)
         image = image.split("/")[1]
         path_image = os.path.join(os.path.dirname(__file__), "media", "imagenes", image)
-        if control.Title == f"Foto{index+1}":
+        if control.Title == f"Foto{index+1}" and os.path.exists(path_image):
             control.Range.InlineShapes.AddPicture(path_image, LinkToFile=False, SaveWithDocument=True)
     
     for lista in analisis_causas:
