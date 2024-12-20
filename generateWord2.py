@@ -147,6 +147,32 @@ if doc.Bookmarks.Exists(bookmark_name) and len(acciones_aplicar) > 0:
     else:
         print("No se encontró una tabla en el marcador especificado.")
 
+
+if not controlBox:    
+    bookmark_name = "tabla_formas_producirse"
+    if doc.Bookmarks.Exists(bookmark_name):
+        bookmark_range = doc.Bookmarks(bookmark_name).Range
+        celda1 = False
+        celda2 = False
+        if bookmark_range.Tables.Count > 0:
+            table = bookmark_range.Tables(1)
+            for row in table.Rows:
+                for index, cell in enumerate(row.Cells):
+                    cell_text = cell.Range.Text.strip()
+                    if(index % 2 != 0 and celda2 == False):
+                        # Usar una expresión regular para verificar si el texto contiene solo caracteres de control o está vacío
+                        if re.match(r'^[\x07\x0D]*$', cell_text):  # \x07 es el carácter de fin de celda, \x0D es retorno de carro
+                            cell.Range.Text = data['formas_accidente']
+                            celda2 = True
+                    elif (celda1 == False):
+                        if re.match(r'^[\x07\x0D]*$', cell_text):  # \x07 es el carácter de fin de celda, \x0D es retorno de carro
+                            checkbox = cell.Range.ContentControls.Add(8)
+                            checkbox.Title = "Checkbox"
+                            checkbox.Checked = True
+                            celda1 = True
+
+
+
 # Cerrar Word
 
 doc.Close()
