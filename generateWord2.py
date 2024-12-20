@@ -63,6 +63,7 @@ if doc.Bookmarks.Exists("lista_causas"):
         bookmark.InsertAfter(causa)
         bookmark.InsertParagraphAfter()
             
+controlBox = False
 
 
 for control in doc.ContentControls:
@@ -107,6 +108,7 @@ for control in doc.ContentControls:
         control.Checked = (valoracion_hechos[4] == "NO")
     elif control.Title == data['formas_accidente']:
         control.Checked = (True)
+        controlBox = True
     
     for index, image in enumerate(imagenes):
         image = re.sub(r"[<>[\]]","",image)
